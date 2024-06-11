@@ -1,38 +1,53 @@
-.App {
+/* src/App.css */
+
+body {
+  font: 18px "Century Gothic", Futura, sans-serif; /* Increased font size */
+  margin: 20px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 36px; /* Increased font size */
+  font-weight: bold;
+  line-height: 60px; /* Adjusted line height */
+  height: 60px; /* Increased height */
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
   text-align: center;
+  width: 60px; /* Increased width */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.square:focus {
+  outline: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.kbd-navigation .square:focus {
+  background: #ddd;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.game {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.game-info {
+  margin-top: 20px;
+  font-size: 24px; /* Increased font size */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.reset-button {
+  margin-top: 20px;
+  padding: 15px 30px; /* Increased padding */
+  font-size: 20px; /* Increased font size */
+  cursor: pointer;
 }
